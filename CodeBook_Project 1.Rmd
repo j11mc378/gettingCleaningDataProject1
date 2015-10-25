@@ -5,7 +5,7 @@ date: "October 25, 2015"
 output: html_document
 ---
 ##Project Description
-The obejctive of the project is to demonstrate how to collect, understand, work with, and clean a data set. The ultimate goal is to create a tidy data set to be used for later analysis.
+The objective of the project is to demonstrate how to collect, understand, work with, and clean a data set. The ultimate goal is to create a tidy data set to be used for later analysis.
 
 In this project we use the data from the Human Activity Recognition Using Smartphones Data Set.
 
