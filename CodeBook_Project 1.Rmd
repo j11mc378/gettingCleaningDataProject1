@@ -1,0 +1,82 @@
+---
+title: "Getting and Cleaning Data - Project 1"
+author: "Jorge Castaneda"
+date: "October 25, 2015"
+output: html_document
+---
+##Project Description
+The obejctive of the project is to demonstrate how to collect, understand, work with, and clean a data set. The ultimate goal is to create a tidy data set to be used for later analysis.
+
+In this project we use the data from the Human Activity Recognition Using Smartphones Data Set.
+
+#Study Design and data processing
+
+
+**Collection of the raw data**
+
+We used the data that was collected by the Human Activity Recognition Using Smartphones Data Set. As explained in their description (linked at the bottom), they had 30 volunteers perform 6 different activities wearing a smartphone. The data was randomly partitioned into two sets - 70% of volunteers for generating the training data and 30% for the test data.
+
+These data sets were downloaded directly from the team's website.
+
+##Creating the tidy datafile
+
+**Guide to create the tidy data file**
+
+The following high level steps show how to create the tidy data set in this project:
+
+1. download the data from the following link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+2. Unzip the data and ensure the "UCI HAR Dataset" is in your R working directory. The "UCI HAR Dataset" should include the following:
+ - train (folder)
+ - test(folder)
+ - README (file)
+ - features_info (file)
+ - features (file)
+ - activity_labels (file)
+ 
+3. The "run_analysis.R" code (a function) and it should also be in your working directory.
+
+4. Source the "run_analysis.R" code in R (using the source command)
+
+5. Run the run_analysis function. This function will perform the data loading, manipulation and tidy data set creation.
+
+6. The tidy data set will be created in your working directory and it will have the following file name: "tidy_result.txt"
+
+7. The "tidy_result.txt" file can be read using R. Specifically, the read.table command with header=TRUE is one way to load it.
+
+**Cleaning of the data**
+
+The script does the following tasks to prepare the tidy data set:
+
+  1) Rename the train/test data set with appropriate feature names
+
+  2) Keep only the mean and standard deviation data/features. The rest are ommitted as not required for the assignment.
+
+  3) Merge the train/test data with the appropriate activity labels and features (which are kept in separate files)
+
+  4) Combine the train and test data into a single
+
+  5) Calculate the average of the remaining columns for each subject and activity
+
+  6) Create the file with the tidy data set
+
+Further details are provided in the README document.
+
+##Description of the variables in the tiny_data.txt file
+
+The tidy data set contains 40 observations of 68 variables.
+
+As a summary, the variables includes:
+
+ - SubjectID (int): provides the individual ID (volunteer). Range 1 to 30.
+ 
+ - ActivityName (Factor): Provides the 6 activities by name. Include: LAYING, SITTING, STANDING, WALKING, WALKING_DOWNSTAIRS, and WALKING_UPSTAIRS.
+ 
+ -  The other 66 variables are various mean and standard deviation features. These were summarized/calculated based on the Subject and the Activity. Their units are standard gravity units (g) and their explanations are provided in the source of the data: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
+
+##Sources
+Data source and descriptions of experiments and features:
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+Project assigment details:
+https://class.coursera.org/getdata-033/
