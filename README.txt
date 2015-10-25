@@ -33,3 +33,5 @@ the first row in xTrain corresponds to the first row in yTrain and subject_Train
 [This accomplishes Task 5 in the project requirements]
 
 These steps have been added inline with the code.
+
+The codebook provides all the other details about the data and the overall process.
